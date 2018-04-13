@@ -1,13 +1,15 @@
 #指定需要CMAKE的最小版本
 cmake_minimum_required(VERSION 3.4.1)
 
-if(${ANDROID_ABI} STREQUAL "armeabi-v7a")
-    include_directories(${ANDROID_SYSROOT}/usr/include/arm-linux-androideabi)
-elseif(${ANDROID_ABI} STREQUAL "arm64-v8a")
-    include_directories(${ANDROID_SYSROOT}/usr/include/aarch64-linux-android)
-else()
-    include_directories(${ANDROID_SYSROOT}/usr/include/arm-linux-androideabi)
-endif()
+#if (${ANDROID_ABI} STREQUAL "x86_64")
+#    include_directories(${ANDROID_SYSROOT}/usr/include/x86_64-linux-android)
+#elseif (${ANDROID_ABI} STREQUAL "x86")
+#    include_directories(${ANDROID_SYSROOT}/usr/include/i686-linux-android)
+#elseif (${ANDROID_ABI} STREQUAL "arm64-v8a")
+#    include_directories(${ANDROID_SYSROOT}/usr/include/aarch64-linux-android)
+#elseif (${ANDROID_ABI} STREQUAL "armeabi-v7a")
+#    include_directories(${ANDROID_SYSROOT}/usr/include/arm-linux-androideabi)
+#endif()
 
 
 #C 的编译选项是 CMAKE_C_FLAGS

@@ -11,8 +11,10 @@ android {
 
         externalNativeBuild {
             cmake {
+//                cppFlags "-frtti -fexceptions"
                 cppFlags ""
-                abiFilters 'armeabi' , 'x86'//一般手机前俩个库就基本兼容了, 'armeabi-v7a','arm64-v8a'
+                //一般手机'armeabi' , 'x86'就基本兼容了
+                abiFilters 'armeabi' , 'x86', 'armeabi-v7a','arm64-v8a','x86_64','mips', 'mips64'
             }
         }
     }

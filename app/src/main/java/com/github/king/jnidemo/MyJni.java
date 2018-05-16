@@ -6,6 +6,7 @@ package com.github.king.jnidemo;
 public class MyJni {
 
     /**
+     * 回车
      * 编译.h文件
      * 首先点击make project 就是绿色小锤子按钮
      * cd app/src/main/
